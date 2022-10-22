@@ -12,6 +12,55 @@
 <hr>
 <br>
 
+<h2>v1.0.1: Git</h2>
+<hr>
+<p><b>Posted: </b>10.22.22</p>
+<p><b>By: </b>Josh Evans</p>
+<br>
+<p>As I mentioned in the last post, I placed the <code>index.html</code> file in GitHub so that I could use it for hosting.  This allows me to use <a href="https://git-scm.com">git</a> to pull down my code onto any computer and manage changes and updates.</p>  
+<p/>I think the next few changes to this site are going to be to my personal tool chain because I wrote the last post the way I used to in middle school and it took me six months from the starting this project to deploying the first post.</p>
+
+<h3>Installation</h3>
+
+<p>If you're following along, you'll need to have git installed. I already do, so I skipped this step, but I'm providing it here just for the sake of documentation.</p> 
+<p>Open a terminal or command line on your computer and type the following:</p>
+<p>For MacOS:</p>
+
+<pre>brew install git</pre> 
+
+<p>For Windows:</p>
+
+<pre>winget install --id git.git</pre>
+
+<p>Both of these use package managers to install git. For MacOS, you'll need to install <a href="https://brew.sh">Homebrew</a> if you haven't already. (You should!)</p> 
+<p>Believe it or not, Microsoft built an actual package manger for Windows called <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>.  It's installed on Windows 11 by default, but you may have to install it on Windows 10.</p>
+
+<h3>Pulling down the repo</h3>
+
+<p>After installing git, I like to install the <a href="https://desktop.github.com">GitHub Desktop</a> app.  While I do know all of the text commands for git, I like using the app for interacting with GitHub. A while back GitHub stopped allowing account authentication through the command line to work with git, so this is just easier for now.</p>
+<p>I navigated to <a href="https://github.com/roguescholar42/HowIMadeThisBlog">my repository</a> and used the <b>open with GitHub Desktop</b> option to download the repo to my computer.  This now links the online version with my laptop.</p> 
+
+<h3>Updating the code</h3>
+
+<p>One of the nice features of GitHub Desktop is that it'll let you open your project directly in the file explorer of your computer.  I'm still using TextEdit to make updates and adding the new post inline with the existing code, so the easiest way to open the file for editing is to <b>right click > open with</b> in Finder.</p> 
+<p>I haven't really added any new structure to my HTML layout other then adding the new content to the top of the page, so I'll skip adding it here.  The one change to my workflow is that I wrote this post in the excellent <a href="https://obsidian.md">Obsidian</a> text editor and then pasted it into TextEdit.  That strips any formatting out, so I have to add it back in with markup. Fearing another six months gap, I needed writing posts to be easier for now.</p>
+
+<h3>Commit and Push</h3>
+
+<p>After the post was correctly formatted, I saved the file which triggered a changed state in GitHub Desktop.  The cool thing about get is that it allows you to decide when changes are saved and how close those changes get to the final, production code.</p> 
+
+<p>I created a new commit in GitHub desktop and pushed it to the main branch.  GitHub Pages monitors that location, so the production site is updated.</p> 
+
+<p>It later updates, I add secondary code branches to allow me to play with new features. Committing directly to main will work for now.</p>
+
+<h3>Conclusion</h3>
+
+<p>Not a lot has changed to the site itself, but this was the perhaps the biggest change I could have made to my code.  Adding transportability and version history will enable me to experiment and access the backend of my site from anywhere.</p> 
+<p>Making changes to this site has to be easy or I'm just not going to do it.</p> 
+<p>Next up, finishing up the development environment with an IDE.</p>
+<hr>
+<br>
+
 <h2>v1.0: Hello World!</h2>
 <hr>
 <p><b>Posted: </b>10.15.22</p>
