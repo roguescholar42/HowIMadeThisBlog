@@ -1,91 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>How I Made This Blog</title>
-</head>
+    <title>How I Made This Blog</title>
+  </head>
 
-<body>
-<h1>How I Made This Blog</h1>
-<hr>
-<br>
+  <body>
+    <h1>How I Made This Blog</h1>
+    <hr />
+    <br />
 
-<h2>v1.0.1: Git</h2>
-<hr>
-<p><b>Posted: </b>10.22.22</p>
-<p><b>By: </b>Josh Evans</p>
-<br>
-<p>As I mentioned in the last post, I placed the <code>index.html</code> file in GitHub so that I could use it for hosting.  This allows me to use <a href="https://git-scm.com">git</a> to pull down my code onto any computer and manage changes and updates.</p>  
-<p>I think the next few changes to this site are going to be to my personal tool chain because I wrote the last post the way I used to in middle school and it took me six months from the starting this project to deploying the first post.</p>
+    <h2>v1.0.2: VSCode</h2>
+    <hr />
+    <p><b>Posted: </b>10.23.22</p>
+    <p><b>By: </b>Josh Evans</p>
+    <br />
+    <p>
+      Now that the site was managed with git I could delete the copy of my html
+      file from a desktop and work from my repository directly. A code
+      repository is just a fancy way to say folder on your computer were the
+      code for a project is kept.
+    </p>
 
-<h3>Installation</h3>
+    <p>
+      Since it was in a folder, I could now open the project in a proper IDE -
+      Integrated Development Environment. I've used several, but the current one
+      that I really like is <a href="https://code.visualstudio.com">VSCode</a>.
+      It has most of the features I want out of the box - syntax highlighting,
+      code suggestion, git controls, and an integrated terminal - but still
+      allows for plugins to customize it.
+    </p>
 
-<p>If you're following along, you'll need to have git installed. I already do, so I skipped this step, but I'm providing it here just for the sake of documentation.</p> 
-<p>Open a terminal or command line on your computer and type the following:</p>
-<p>For MacOS:</p>
+    <h3>Plugins</h3>
 
-<pre>brew install git</pre> 
+    <p>
+      I used VSCode for more than just web development, so there's quite a few
+      plugins installed. (Which means I'm probably due for a cleanup.) This is
+      only a list of the one's that are going to be helpful for this project:
+    </p>
+    <ul>
+      <li>
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+          >Prettier</a
+        >
+        - This helps make HTML formatted in a way that's more readable.
+      </li>
+      <li>
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag"
+          >Auto Close Tag</a
+        >
+        - Most HTML is written as a pair of tags. This plug generates the
+        closing tag after I write the opener. It doesn't seem like much, but it
+        saves a lot of time and cuts down on the tedium of writing markup.
+      </li>
+      <li>
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
+          >Auto Rename Tag</a
+        >
+        - This one's future proofing. It changes the closing tag if I change its
+        opener. The syntax of this site is no where near needing something like
+        this, but when I finally start adding in CSS, it'll come in handy when
+        working with div tags.
+      </li>
+      <li>
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker"
+          >Code Spell Checker</a
+        >
+        - I have trouble spelling. It's been a plague my whole life. While I
+        draft these posts in a separate application, I do mark up that text in
+        one big file. Sometimes I make changes and I'd like to make sure those
+        edits are spelled correctly. Plus I do plan to go back to drafting
+        directly into VSCode once this site supports Markdown.
+      </li>
+      <li>
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+          >Live Server</a
+        >
+        - Once again, this is more program than I need. This plugin spins up a
+        web server and live updates as I code. For how simple this site is, this
+        is probably only saving me a refresh click, but every little bit helps
+        to reduce the friction of coding.
+      </li>
+    </ul>
 
-<p>For Windows:</p>
+    <p>
+      That's what I have for now. I'll end up adding more to stream line the
+      process.
+    </p>
 
-<pre>winget install --id git.git</pre>
+    <h3>Do I really need this?</h3>
 
-<p>Both of these use package managers to install git. For MacOS, you'll need to install <a href="https://brew.sh">Homebrew</a> if you haven't already. (You should!)</p> 
-<p>Believe it or not, Microsoft built an actual package manger for Windows called <a href="https://learn.microsoft.com/en-us/windows/package-manager/winget/">winget</a>.  It's installed on Windows 11 by default, but you may have to install it on Windows 10.</p>
+    <p>
+      Oh dear lord, yes! I only started this site in a plain text editor to
+      prove to myself that I could still do it. Text editors have come such a
+      long way since I started coding as a kid, but believe it or not there are
+      still people that blog directly from things like Notepad.
+    </p>
 
-<h3>Pulling down the repo</h3>
+    <p>
+      I don't want to be one of those people any more. A big part of web
+      development now is the tools you use to do it with.
+    </p>
 
-<p>After installing git, I like to install the <a href="https://desktop.github.com">GitHub Desktop</a> app.  While I do know all of the text commands for git, I like using the app for interacting with GitHub. A while back GitHub stopped allowing account authentication through the command line to work with git, so this is just easier for now.</p>
-<p>I navigated to <a href="https://github.com/roguescholar42/HowIMadeThisBlog">my repository</a> and used the <b>open with GitHub Desktop</b> option to download the repo to my computer.  This now links the online version with my laptop.</p> 
+    <p>
+      And I've already seen a lot of improvement just from the one post I've
+      done with VSCode. The second I opened this site up in that editor it found
+      a typo I made in a paragraph tag. That's not a major issue, but I was
+      introducing errors into the markup where were only going to worse the more
+      tags I wrote.
+    </p>
 
-<h3>Updating the code</h3>
+    <p>
+      Also I was being lazy and not using any spacing at all to lay out the
+      HTML. This was starting to get really hard to read. I ran the Prettier
+      plugin and it formatted my code and content in such a way that I can
+      quickly read through it and it looks... well, prettier.
+    </p>
 
-<p>One of the nice features of GitHub Desktop is that it'll let you open your project directly in the file explorer of your computer.  I'm still using TextEdit to make updates and adding the new post inline with the existing code, so the easiest way to open the file for editing is to <b>right click > open with</b> in Finder.</p> 
-<p>I haven't really added any new structure to my HTML layout other then adding the new content to the top of the page, so I'll skip adding it here.  The one change to my workflow is that I wrote this post in the excellent <a href="https://obsidian.md">Obsidian</a> text editor and then pasted it into TextEdit.  That strips any formatting out, so I have to add it back in with markup. Fearing another six months gap, I needed writing posts to be easier for now.</p>
+    <p>
+      Between Git and VSCode, my environment is set up enough to make working on
+      the site much easier.
+    </p>
+    <hr />
+    <br />
 
-<h3>Commit and Push</h3>
+    <h2>v1.0.1: Git</h2>
+    <hr />
+    <p><b>Posted: </b>10.22.22</p>
+    <p><b>By: </b>Josh Evans</p>
+    <br />
+    <p>
+      As I mentioned in the last post, I placed the <code>index.html</code> file
+      in GitHub so that I could use it for hosting. This allows me to use
+      <a href="https://git-scm.com">git</a> to pull down my code onto any
+      computer and manage changes and updates.
+    </p>
+    <p>
+      I think the next few changes to this site are going to be to my personal
+      tool chain because I wrote the last post the way I used to in middle
+      school and it took me six months from the starting this project to
+      deploying the first post.
+    </p>
 
-<p>After the post was correctly formatted, I saved the file which triggered a changed state in GitHub Desktop.  The cool thing about get is that it allows you to decide when changes are saved and how close those changes get to the final, production code.</p> 
+    <h3>Installation</h3>
 
-<p>I created a new commit in GitHub desktop and pushed it to the main branch.  GitHub Pages monitors that location, so the production site is updated.</p> 
+    <p>
+      If you're following along, you'll need to have git installed. I already
+      do, so I skipped this step, but I'm providing it here just for the sake of
+      documentation.
+    </p>
+    <p>
+      Open a terminal or command line on your computer and type the following:
+    </p>
+    <p>For MacOS:</p>
 
-<p>It later updates, I add secondary code branches to allow me to play with new features. Committing directly to main will work for now.</p>
+    <pre>brew install git</pre>
 
-<h3>Conclusion</h3>
+    <p>For Windows:</p>
 
-<p>Not a lot has changed to the site itself, but this was the perhaps the biggest change I could have made to my code.  Adding transportability and version history will enable me to experiment and access the backend of my site from anywhere.</p> 
-<p>Making changes to this site has to be easy or I'm just not going to do it.</p> 
-<p>Next up, finishing up the development environment with an IDE.</p>
-<hr>
-<br>
+    <pre>winget install --id git.git</pre>
 
-<h2>v1.0: Hello World!</h2>
-<hr>
-<p><b>Posted: </b>10.15.22</p>
-<p><b>By: </b>Josh Evans</p>
-<br>
+    <p>
+      Both of these use package managers to install git. For MacOS, you'll need
+      to install <a href="https://brew.sh">Homebrew</a> if you haven't already.
+      (You should!)
+    </p>
+    <p>
+      Believe it or not, Microsoft built an actual package manger for Windows
+      called
+      <a
+        href="https://learn.microsoft.com/en-us/windows/package-manager/winget/"
+        >winget</a
+      >. It's installed on Windows 11 by default, but you may have to install it
+      on Windows 10.
+    </p>
 
-<p>Welcome to a very odd experiment that I've been telling myself I was going to do for a few years now: build a blog from absolute scratch and document the process bit by bit. Thus, this is a blog about the creation of itself.</p>
+    <h3>Pulling down the repo</h3>
 
-<h3>Minimum Viable Product</h3>
-<p>At its core, a blog is just a web page, so that's all I need to build: a single HTML document hosted online somehow.  I don't have a file structure yet - that's for rich people - so I don't have any additional documents. No additional pages. No CSS. No hosted images. Just pure HTML formatting being interpreted by your browser's default settings.</p>
-<p>So is this actually a blog? From the reader's perspective, sure. It's going to be a bunch of posts in order, even if it's not very pretty right now. Modern blogging software does a lot for the user - up to and including server administration tasks.  I'm going to have a lot of work to do to cover that gap.</p>
+    <p>
+      After installing git, I like to install the
+      <a href="https://desktop.github.com">GitHub Desktop</a> app. While I do
+      know all of the text commands for git, I like using the app for
+      interacting with GitHub. A while back GitHub stopped allowing account
+      authentication through the command line to work with git, so this is just
+      easier for now.
+    </p>
+    <p>
+      I navigated to
+      <a href="https://github.com/roguescholar42/HowIMadeThisBlog"
+        >my repository</a
+      >
+      and used the <b>open with GitHub Desktop</b> option to download the repo
+      to my computer. This now links the online version with my laptop.
+    </p>
 
-<h3>Tooling</h3>
-<p>I've ran blogs before and like to code as a hobby.  This means that I have a development tool chain set up, but that doesn't sound in keeping with the spirt of this project.  At least not at first.</p>
-<p>The version number at the top isn't just going to track the code I'm writing site, but also my development environment and hosting setup.</p>
-<p>The brief I gave myself was to create a site as if I'd just taken my Mac fresh out of the box. That means I've coded this entire page in TextEdit like a caveman. That's no mean feat because unlike Notepad for Windows, which I have made web pages on, TextEdit is this half plain text, half rich text thing that keeps trying to be helpful and messing up every simple, technical task I try to give it.</p>
-<p>You actually have to <a href="https://support.apple.com/guide/textedit/work-with-html-documents-txted0b6cd61/mac">configure TextEdit to be used for webpage creation</a>, which I didn't know when I started. Getting it to save an <code>index.htm</code> file on my desktop (yes, we're going that basic) took ten minutes and a google search.</p>
-<p>I'm previewing my work by dragging and dropping my page directly into Safari. TextEdit doesn't do tag completion or suggestion for the HTML. There's no syntax highlighting, so I have to pay attention or get lost in a sea of tags. Every character is written by hand. Fifteen year old me would be so proud.</p>
-<p>The editor does spell check which I thought about turning off for that true Notepad feel, but since I'm writing the content in with the markup, that would be a nightmare and I'd end up copy/pasting from Word anyway, so this does save me a step.</p>
+    <h3>Updating the code</h3>
 
-<h3>The code</h3>
-<p>I almost didn't write that heading because I'm only using HTML. I know there are CDN's that will allow you to hot link in CSS frameworks without having to host them on your site, but again, I'm going for the most <em>minimal</em> thing I can actually call a website at this point. In future posts we'll make this thing look pretty. Or at least, you know, readable.</p>
-<p>Here's the basic structure:</p>
+    <p>
+      One of the nice features of GitHub Desktop is that it'll let you open your
+      project directly in the file explorer of your computer. I'm still using
+      TextEdit to make updates and adding the new post inline with the existing
+      code, so the easiest way to open the file for editing is to
+      <b>right click > open with</b> in Finder.
+    </p>
+    <p>
+      I haven't really added any new structure to my HTML layout other then
+      adding the new content to the top of the page, so I'll skip adding it
+      here. The one change to my workflow is that I wrote this post in the
+      excellent <a href="https://obsidian.md">Obsidian</a> text editor and then
+      pasted it into TextEdit. That strips any formatting out, so I have to add
+      it back in with markup. Fearing another six months gap, I needed writing
+      posts to be easier for now.
+    </p>
 
-<pre>
+    <h3>Commit and Push</h3>
+
+    <p>
+      After the post was correctly formatted, I saved the file which triggered a
+      changed state in GitHub Desktop. The cool thing about get is that it
+      allows you to decide when changes are saved and how close those changes
+      get to the final, production code.
+    </p>
+
+    <p>
+      I created a new commit in GitHub desktop and pushed it to the main branch.
+      GitHub Pages monitors that location, so the production site is updated.
+    </p>
+
+    <p>
+      It later updates, I add secondary code branches to allow me to play with
+      new features. Committing directly to main will work for now.
+    </p>
+
+    <h3>Conclusion</h3>
+
+    <p>
+      Not a lot has changed to the site itself, but this was the perhaps the
+      biggest change I could have made to my code. Adding transportability and
+      version history will enable me to experiment and access the backend of my
+      site from anywhere.
+    </p>
+    <p>
+      Making changes to this site has to be easy or I'm just not going to do it.
+    </p>
+    <p>Next up, finishing up the development environment with an IDE.</p>
+    <hr />
+    <br />
+
+    <h2>v1.0: Hello World!</h2>
+    <hr />
+    <p><b>Posted: </b>10.15.22</p>
+    <p><b>By: </b>Josh Evans</p>
+    <br />
+
+    <p>
+      Welcome to a very odd experiment that I've been telling myself I was going
+      to do for a few years now: build a blog from absolute scratch and document
+      the process bit by bit. Thus, this is a blog about the creation of itself.
+    </p>
+
+    <h3>Minimum Viable Product</h3>
+    <p>
+      At its core, a blog is just a web page, so that's all I need to build: a
+      single HTML document hosted online somehow. I don't have a file structure
+      yet - that's for rich people - so I don't have any additional documents.
+      No additional pages. No CSS. No hosted images. Just pure HTML formatting
+      being interpreted by your browser's default settings.
+    </p>
+    <p>
+      So is this actually a blog? From the reader's perspective, sure. It's
+      going to be a bunch of posts in order, even if it's not very pretty right
+      now. Modern blogging software does a lot for the user - up to and
+      including server administration tasks. I'm going to have a lot of work to
+      do to cover that gap.
+    </p>
+
+    <h3>Tooling</h3>
+    <p>
+      I've ran blogs before and like to code as a hobby. This means that I have
+      a development tool chain set up, but that doesn't sound in keeping with
+      the spirt of this project. At least not at first.
+    </p>
+    <p>
+      The version number at the top isn't just going to track the code I'm
+      writing site, but also my development environment and hosting setup.
+    </p>
+    <p>
+      The brief I gave myself was to create a site as if I'd just taken my Mac
+      fresh out of the box. That means I've coded this entire page in TextEdit
+      like a caveman. That's no mean feat because unlike Notepad for Windows,
+      which I have made web pages on, TextEdit is this half plain text, half
+      rich text thing that keeps trying to be helpful and messing up every
+      simple, technical task I try to give it.
+    </p>
+    <p>
+      You actually have to
+      <a
+        href="https://support.apple.com/guide/textedit/work-with-html-documents-txted0b6cd61/mac"
+        >configure TextEdit to be used for webpage creation</a
+      >, which I didn't know when I started. Getting it to save an
+      <code>index.htm</code> file on my desktop (yes, we're going that basic)
+      took ten minutes and a google search.
+    </p>
+    <p>
+      I'm previewing my work by dragging and dropping my page directly into
+      Safari. TextEdit doesn't do tag completion or suggestion for the HTML.
+      There's no syntax highlighting, so I have to pay attention or get lost in
+      a sea of tags. Every character is written by hand. Fifteen year old me
+      would be so proud.
+    </p>
+    <p>
+      The editor does spell check which I thought about turning off for that
+      true Notepad feel, but since I'm writing the content in with the markup,
+      that would be a nightmare and I'd end up copy/pasting from Word anyway, so
+      this does save me a step.
+    </p>
+
+    <h3>The code</h3>
+    <p>
+      I almost didn't write that heading because I'm only using HTML. I know
+      there are CDN's that will allow you to hot link in CSS frameworks without
+      having to host them on your site, but again, I'm going for the most
+      <em>minimal</em> thing I can actually call a website at this point. In
+      future posts we'll make this thing look pretty. Or at least, you know,
+      readable.
+    </p>
+    <p>Here's the basic structure:</p>
+
+    <pre>
 &lt;!DOCTYPE html>
 &lt;html lang="en">
 
@@ -112,42 +361,115 @@
 &lt;/body>
 
 &lt;/html>
-</pre>
+</pre
+    >
 
-<p>As I said, <em>basic</em>. Honestly, the hardest part was remembering <a href="https://htmlhead.dev">which tags</a> should go between the <code>&lt;head></code> tags, and <a href="https://devpractical.com/display-html-tags-as-plain-text/">how to display the code above.</a></p>
-<p>What I need now is just a skeleton to hang content on. I did use the A tag to make a few links. Part of what this site is going to used for is bookmaking helpful development and reference sites for myself.</p>
-<p>Thinking about it now, I probably should have typed all this out as a normal text file and done the markup later instead of writing everything between paragraph tags, but that's something I can try on future posts. The media is very much the message with this project, so the way I write this blog is just as important as <em>how</em> I write it.</p>
+    <p>
+      As I said, <em>basic</em>. Honestly, the hardest part was remembering
+      <a href="https://htmlhead.dev">which tags</a> should go between the
+      <code>&lt;head></code> tags, and
+      <a href="https://devpractical.com/display-html-tags-as-plain-text/"
+        >how to display the code above.</a
+      >
+    </p>
+    <p>
+      What I need now is just a skeleton to hang content on. I did use the A tag
+      to make a few links. Part of what this site is going to used for is
+      bookmaking helpful development and reference sites for myself.
+    </p>
+    <p>
+      Thinking about it now, I probably should have typed all this out as a
+      normal text file and done the markup later instead of writing everything
+      between paragraph tags, but that's something I can try on future posts.
+      The media is very much the message with this project, so the way I write
+      this blog is just as important as <em>how</em> I write it.
+    </p>
 
-<h3>Hosting</h3>
+    <h3>Hosting</h3>
 
-<p>There's about about nine billion different ways to get a website up, but I'd like to go for simple and cheap. While <a href="https://pages.github.com">GitHub Pages</a> can be a bit over built for what I'm currently doing, my long term plan involves using git for code versioning and GitHub for of site backup anyway, so I might as well get it on here now because it's going there eventual. In keeping of the "starting from nothing and building up" nature of this first post, I'm going to only use the web interact for GitHub and not use git in the command line.</p>
-<p>I created a new repository in the GitHub account and dragged and dropped my Index.html file into a new commit and merged it to the main branch.  If you're not sure what that means, I made this only file the first saved version of my code and my site.</p>
-<p>After that, I set that main branch to be read it by GitHub Pages. Since my site if pure HTML, all GitHub has to do is host the file directly and your browser will render it correctly. Writing this site might be a little tedious, but at least it's easy on system resources.</p>
+    <p>
+      There's about about nine billion different ways to get a website up, but
+      I'd like to go for simple and cheap. While
+      <a href="https://pages.github.com">GitHub Pages</a> can be a bit over
+      built for what I'm currently doing, my long term plan involves using git
+      for code versioning and GitHub for of site backup anyway, so I might as
+      well get it on here now because it's going there eventual. In keeping of
+      the "starting from nothing and building up" nature of this first post, I'm
+      going to only use the web interact for GitHub and not use git in the
+      command line.
+    </p>
+    <p>
+      I created a new repository in the GitHub account and dragged and dropped
+      my Index.html file into a new commit and merged it to the main branch. If
+      you're not sure what that means, I made this only file the first saved
+      version of my code and my site.
+    </p>
+    <p>
+      After that, I set that main branch to be read it by GitHub Pages. Since my
+      site if pure HTML, all GitHub has to do is host the file directly and your
+      browser will render it correctly. Writing this site might be a little
+      tedious, but at least it's easy on system resources.
+    </p>
 
-<h3>Published!</h3>
+    <h3>Published!</h3>
 
-<p>And that's it! Github reads out and displays this site you're currently reading. For free, I might add.  One of the goals of this project is to keep the costs as close to free as I can.</p>
-<p>Now I wrote a lot about how I approached each step, but in summation I did the following:</p>
+    <p>
+      And that's it! Github reads out and displays this site you're currently
+      reading. For free, I might add. One of the goals of this project is to
+      keep the costs as close to free as I can.
+    </p>
+    <p>
+      Now I wrote a lot about how I approached each step, but in summation I did
+      the following:
+    </p>
 
-<ol>
-<li>Created a new index.html file on my desktop.</li>
-<li>Used TextEdit to write my content inline with HTML markup.</li>
-<li>Created a new code repository on GitHub.</li>
-<li>Dragged the index.html file into the repository.</li>
-<li>Set the main branch of the repository to be used with GitHub pages.</li>
-</ol>
+    <ol>
+      <li>Created a new index.html file on my desktop.</li>
+      <li>Used TextEdit to write my content inline with HTML markup.</li>
+      <li>Created a new code repository on GitHub.</li>
+      <li>Dragged the index.html file into the repository.</li>
+      <li>
+        Set the main branch of the repository to be used with GitHub pages.
+      </li>
+    </ol>
 
-<p>The URL is the current default domain that GitHub gives you for hosted sites. I'll add a custom domain in a future post. This will work for now.</p>
+    <p>
+      The URL is the current default domain that GitHub gives you for hosted
+      sites. I'll add a custom domain in a future post. This will work for now.
+    </p>
 
-<h3>Why am I doing this?</h3>
+    <h3>Why am I doing this?</h3>
 
-<p>It's a fair question. Web development, server configuration, and content management have been hobbies of my for a very long time, and I wanted to create a project that covers those topics in an almost chronological way. Building a website has become a bit of a complex process. That's why in the Year of Our Lord 2022 almost nobody does it unless they're being paid. That's too bad because I think a lot of these topics are really interesting if they're not presented in a vacuum.</p>
-<p>Good technology should always be an actual solution and not features in search of a problem. This website is a barely functional, one-page piece of markup that doesn't help me out in any way. There's a lot of issues that I have to solve, and I'd like to use this site to chronicle how each technology solves these problems in a practical way that drove their development in the first place.</p>
-<p>This site looks like it's from 1993 because I built it the way you had to do it in 1993. Sure, I used a slightly fancy way to host it, but it gets out of my way for now. There's plenty of time to set up a LAMP stack later.</p>
-<p>This blog, like technology is a continuous process.  Every site has to change it meet its. Unlike most, I'm going to be documenting those changes as I make them</p>
-<p>I hope you enjoy the ride as much as I will.</p>
+    <p>
+      It's a fair question. Web development, server configuration, and content
+      management have been hobbies of my for a very long time, and I wanted to
+      create a project that covers those topics in an almost chronological way.
+      Building a website has become a bit of a complex process. That's why in
+      the Year of Our Lord 2022 almost nobody does it unless they're being paid.
+      That's too bad because I think a lot of these topics are really
+      interesting if they're not presented in a vacuum.
+    </p>
+    <p>
+      Good technology should always be an actual solution and not features in
+      search of a problem. This website is a barely functional, one-page piece
+      of markup that doesn't help me out in any way. There's a lot of issues
+      that I have to solve, and I'd like to use this site to chronicle how each
+      technology solves these problems in a practical way that drove their
+      development in the first place.
+    </p>
+    <p>
+      This site looks like it's from 1993 because I built it the way you had to
+      do it in 1993. Sure, I used a slightly fancy way to host it, but it gets
+      out of my way for now. There's plenty of time to set up a LAMP stack
+      later.
+    </p>
+    <p>
+      This blog, like technology is a continuous process. Every site has to
+      change it meet its. Unlike most, I'm going to be documenting those changes
+      as I make them
+    </p>
+    <p>I hope you enjoy the ride as much as I will.</p>
 
-<hr>
-</body>
-
+    <hr />
+  </body>
 </html>
